@@ -1,0 +1,181 @@
+
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+.decider{display: none !important;}
+.nav-pc{ margin-top:2em;  .nav-container-mobile{ gap: 1.5em;   background-color: rgb(0,37,99); width: 80%; padding:1em ; display:flex; justify-content:center; display: flex; flex-direction: column;  justify-content: space-between;  width: 90%; }
+   position: absolute; top: 0; width:100%;  z-index: 10; display:flex; justify-content:center; align-items:center;
+          ul{display: flex;  flex-direction: column;  gap: 1.5em;   align-items: center; justify-content: center;
+                    li{  display: flex; align-items: center; justify-content: center;}
+                    a{text-decoration: none; color: white; font-family: 'cera-medium'; font-size: 1.6rem;
+                    display: flex; align-items: center; justify-content: center;
+                    }
+                    .logo-container{ img{height: 2rem;}}
+          }
+          }
+          .sun{height:2em;}
+.search-container {
+  position: relative;
+}
+
+input[type="text"] {
+  padding: 8px;
+  width: 115px;
+  border: none;
+  text-align: center;
+  border-radius: 70px;
+}
+
+button[type="submit"] {
+  position: absolute;
+  top: 0;
+  left: 15%;
+  background: none;
+  border: none;
+  padding: 8px;
+  cursor: pointer;
+}
+.menu{ background: white; padding: 0.1em; border-radius: 5px; display: flex; justify-content: center; align-items: center; flex-direction: column;
+          z-index: 3000; position:absolute; height: 4.1rem; width: 4.5rem; right: 1em; top: 1em !important;
+        .bar{ border-radius: 5px; background: rgb(0,37,99); z-index: 3000; margin: 0.2em; height: 8px; width: 80%; }
+  transition: all 0.7s ease-in-out;
+    }  
+    .open{ .one{transform: rotate(45deg) translate(8px , 4px);}
+           .two{display: none;}
+           .three{transform: rotate(-45deg) translate(4px , -1px); ;}
+
+    } 
+
+
+
+
+
+/*
+####################################################
+M E D I A  Q U E R I E S
+####################################################
+*/
+
+/*
+::::::::::::::::::::::::::::::::::::::::::::::::::::
+Bootstrap 4 breakpoints
+*/
+
+/* 
+Extra small devices (portrait phones, less than 576px) 
+No media query since this is the default in Bootstrap because it is "mobile first"
+*/
+
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 568px) {  
+
+}
+
+/* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
+@media (min-width: 768px) {  
+
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) { 
+  .menu{display: none;}
+  .decider{ display: unset !important; }
+  .nav-pc{ margin-top:2em; .nav-container{display:flex; justify-content:center; background: transparent; display: flex; flex-direction: row;  justify-content: space-between;  width: 90%; }
+   position: absolute; top: 0; width:100%;  z-index: 10; display:flex !important; justify-content:center; align-items:center;
+          ul{display: flex; gap: 1.4em; flex-direction: row;   align-items: center; justify-content: center;
+                    li{  display: flex; align-items: center; justify-content: center;}
+                    a{text-decoration: none; color: white; font-family: 'cera-medium'; font-size: 1.1rem;
+                    display: flex; align-items: center; justify-content: center;
+                    }
+                    .logo-container{ img{height: 2rem;}}
+          }
+          }
+          .sun{height:2em;}
+.search-container {
+  position: relative;
+}
+
+input[type="text"] {
+  padding: 8px;
+  width: 115px;
+  border: none;
+  text-align: center;
+  border-radius: 70px;
+}
+
+button[type="submit"] {
+  position: absolute;
+  top: 0;
+  left: 3%;
+  background: none;
+  border: none;
+  padding: 8px;
+  cursor: pointer;
+}
+
+
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {  
+    
+}
+
+
+
+/*
+::::::::::::::::::::::::::::::::::::::::::::::::::::
+Custom media queries
+*/
+
+/* Set width to make card deck cards 100% width */
+@media (max-width: 950px) { 
+
+}
