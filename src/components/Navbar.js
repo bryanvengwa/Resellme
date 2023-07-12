@@ -1,7 +1,9 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { FaSearch } from "react-icons/fa";
 import "../scss/navbar.scss";
+import { themeContext } from "../Context/ThemeContext";
 function Nav(props) {
+	const {toggleTheme} = useContext(themeContext)
 	return (
 		<>
 			<nav className={`nav-pc ${props.decider} nav-mobile `}>
@@ -49,6 +51,7 @@ function Nav(props) {
 							<span>
 								<img
 									src="imgs/sun.png"
+									onClick={toggleTheme}
 									className="img-fluid sun"
 									alt="sun"
 								/>

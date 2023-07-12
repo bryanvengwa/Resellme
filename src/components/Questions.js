@@ -1,6 +1,12 @@
-import React from "react";
+import React, { useContext } from "react";
+import { themeContext } from "../Context/ThemeContext";
 
 export default function Questions() {
+	const { theme } = useContext(themeContext);
+	const themeStyles = {
+		backgroundColor: theme ? "white" : "black",
+		color: theme ? "black" : "white",
+	};
 	return (
 		<>
 			<section className="questions">
@@ -43,7 +49,10 @@ export default function Questions() {
 										aria-labelledby="headingOne"
 										data-bs-parent="#accordionExample"
 									>
-										<div className="accordion-body">
+										<div
+											style={themeStyles}
+											className="accordion-body"
+										>
 											Lorem ipsum dolor sit amet,
 											consectetur adipiscing elit, sed do
 											eiusmod empor incididunt ut labore
@@ -84,7 +93,10 @@ export default function Questions() {
 										aria-labelledby="headingTwo"
 										data-bs-parent="#accordionExample"
 									>
-										<div className="accordion-body">
+										<div
+											style={themeStyles}
+											className="accordion-body"
+										>
 											Lorem ipsum dolor sit amet,
 											consectetur adipiscing elit, sed do
 											eiusmod empor incididunt ut labore
@@ -125,7 +137,10 @@ export default function Questions() {
 										aria-labelledby="headingThree"
 										data-bs-parent="#accordionExample"
 									>
-										<div className="accordion-body">
+										<div
+											style={themeStyles}
+											className="accordion-body"
+										>
 											Lorem ipsum dolor sit amet,
 											consectetur adipiscing elit, sed do
 											eiusmod empor incididunt ut labore
@@ -165,7 +180,10 @@ export default function Questions() {
 										aria-labelledby="headingFour"
 										data-bs-parent="#accordionExample"
 									>
-										<div className="accordion-body">
+										<div
+											style={themeStyles}
+											className="accordion-body"
+										>
 											Lorem ipsum dolor sit amet,
 											consectetur adipiscing elit, sed do
 											eiusmod empor incididunt ut labore
@@ -206,7 +224,10 @@ export default function Questions() {
 										aria-labelledby="headingFive"
 										data-bs-parent="#accordionExample"
 									>
-										<div className="accordion-body">
+										<div
+											style={themeStyles}
+											className="accordion-body"
+										>
 											Lorem ipsum dolor sit amet,
 											consectetur adipiscing elit, sed do
 											eiusmod empor incididunt ut labore

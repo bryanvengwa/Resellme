@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import Navbar from '../components/Navbar'
 import Header from '../components/Header'
 import Wait from '../components/Wait'
@@ -9,10 +9,16 @@ import Credit from '../components/Credit'
 import Footer from '../components/Footer'
 import Featured from '../components/Featured'
 import Testimonials from '../components/Testimonials'
+import Slider from '../components/Slider'
+import { themeContext } from '../Context/ThemeContext'
 
 export default function Home() {
+	const { theme } = useContext(themeContext)
+	const themeStyles = {
+		backgroundColor: theme ? "white" : "black",
+	};
   return (
-		<>
+		<div style={themeStyles} >
 			<Navbar />
 			<Header />
 			<br />
@@ -28,6 +34,7 @@ export default function Home() {
 			<Wait />
 			<Start />
 			<Features />
+      <Slider/>
       <Testimonials/>
 			<Questions />
 			<Featured heading={"We’ve Been Featured In"} />
@@ -38,6 +45,6 @@ export default function Home() {
 			<br />
 			<br />
 			<Footer />
-		</>
+		</div>
   );
 }

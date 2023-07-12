@@ -31,8 +31,11 @@ footer, header, hgroup, menu, nav, section {
 	display: block;
 }
 body {
+	//  background-color: black !important;
+	color: white !important;
 	line-height: 1;
 	overflow-x: hidden !important;
+	// z-index: 9000;
 }
 ol, ul {
 	list-style: none;
@@ -68,7 +71,7 @@ header{ height: 90vh; width: 100%; position: absolute; background-color:rgb(0,37
 p{font-size: 1.2rem;}
 
 .laptop-container{  
-	.img-container{min-width: 44vh; height:3vh; z-index: 9000; height: fit-content; position: relative;
+	.img-container{min-width: 94vw; height:3vh; z-index: 9000; height: fit-content; position: relative;
 	img{height: 100%; width: 100%; object-fit: contain; }
 	.overlay{position: absolute; top: 0; left: 0; width: 100%;height: 100%; display: flex; align-items: center;justify-content: center; 
 	img{height: 3rem;}
@@ -110,9 +113,11 @@ button{ @include buttons; background: $blue;  color: white; width: 90%; }
 .img-container{height:3.5rem; margin-left: 0.7em; width:3.5rem;  background: $blue; display: flex; align-items: center ; justify-content: center; border-radius: 50%;
 img{height: 2rem; width: 2rem;}
 }
-.feature-card{border: none;
-display: flex; align-items: f;
+.feature-card{border: none !important; 
+display: flex; 
 }
+
+
 }
 .questions{ margin-top: 4em;  h1{font-family: $cera; color: $blue; }
 	 p{color: $blue; font-family: 'avenir';}
@@ -157,7 +162,61 @@ button{color: white; background: $blue; border: none; height: 3rem; border-radiu
 }
 
 }
+#feature-card{ max-width: 19rem; border: none; height: 24rem;
+	h4{color: $blue; font-family: 'cera-black';}  p{color: $blue; font-family: 'avenir';}
+.img-container{height:3.5rem; margin-left: 0.7em; width:3.5rem;  background: $blue; display: flex; align-items: center ; justify-content: center; border-radius: 50%;
+img{height: 2rem; width: 2rem;}
+}
+button{@include buttons; color: white; background: $blue;  width: 80%;
+padding: 0.5em 1em !important;
+}
 
+}
+.cases-container{background:#F8F8F8;position: relative; padding: 0.1em 0;  margin:  4em 0; }
+.cases{ h2{color: $blue; font-family: 'cera-black';margin:  2em 0;}  margin:  9em 0;  position: relative;}
+
+
+.swiper-container {
+
+  position: relative;
+}
+.swiper-button-next{ transform: translateX(-20%);
+color: red;
+}
+.swiper-button-prev{ transform: translateX(20%);}
+.swiper-button-prev,.swiper-button-next {
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  z-index: 10;
+}
+.arrow-container{ position: relative;
+	border: 2px solid grey;
+width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+    display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.swiper-button-prev svg,
+.swiper-button-next svg {
+ display: none !important;
+}
+
+.button-containers { display: flex;
+  position: absolute;
+  right: 5rem;
+  gap: 1em;
+  z-index: 9000;
+  bottom: -6rem;
+}
+
+.swiper-button-next:after, .swiper-button-prev:after {
+	display: none;
+}
 
 
 
@@ -185,6 +244,17 @@ No media query since this is the default in Bootstrap because it is "mobile firs
 
 /* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
 @media (min-width: 768px) { 
+	.laptop-container{  
+	.img-container{min-width: 94vw; height:3vh; z-index: 9000; height: fit-content; position: relative;
+	img{height: 100%; width: 100%; object-fit: contain; }
+	.overlay{position: absolute; top: 0; left: 0; width: 100%;height: 100%; display: flex; align-items: center;justify-content: center; 
+	img{height: 3rem;}
+	}
+
+	}
+	position: absolute; bottom: -3rem;  left: 50%;
+  transform: translateX(-50%);
+}
 	.featured{ .flex-container{flex-direction: row;}}
 	.credit{ height: 50vh;
  h1{font-family: $cera; font-size: 3.5rem; color: white; text-align: center; }
@@ -212,6 +282,17 @@ No media query since this is the default in Bootstrap because it is "mobile firs
 /* Large devices (desktops, 992px and up) */
 
 @media (min-width: 992px) { 
+	.laptop-container{  
+	.img-container{min-width: 72vw; height:3vh; z-index: 9000; height: fit-content; position: relative;
+	img{height: 100%; width: 100%; object-fit: contain; }
+	.overlay{position: absolute; top: 0; left: 0; width: 100%;height: 100%; display: flex; align-items: center;justify-content: center; 
+	img{height: 3rem;}
+	}
+
+	}
+	position: absolute; bottom: -19em;  left: 50%;
+  transform: translateX(-50%);
+}
 	// .testimonial-card{min-width: 20rem !important; }
 		.credit{ height: 60vh; gap: 1em;
  h1{font-family: $cera; font-size: 3.5rem; color: white; text-align: center; }
@@ -230,7 +311,7 @@ No media query since this is the default in Bootstrap because it is "mobile firs
 	.start{.button-container{button{width: 30%; margin-top: 2em; }}}
 	.card-container{ padding: unset;}
 	#start-card{min-width: 21rem; max-height: 460px; }
-	.laptop-container{bottom: -12rem;}
+	
 		header{h1{font-size: 4rem;width: 55%; }}
 		
 
@@ -238,7 +319,17 @@ No media query since this is the default in Bootstrap because it is "mobile firs
 
 /* Extra large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {  
-    
+    .laptop-container{  bottom: -60%;
+	.img-container{min-width: 80vw; height:3vh; z-index: 9000; height: fit-content; position: relative;
+	img{height: 100%; width: 100%; object-fit: contain; }
+	.overlay{position: absolute; top: 0; left: 0; width: 100%;height: 100%; display: flex; align-items: center;justify-content: center; 
+	img{height: 3rem;}
+	}
+
+	}
+}
+
+.wait{margin-top: 140vh;}
 }
 
 

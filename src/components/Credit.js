@@ -1,7 +1,7 @@
-import React from 'react'
+import React from "react";
 
 export default function Credit() {
-  return (
+	return (
 		<>
 			<section className="credit">
 				<h1>You Don’t Need Any Credit To Get Started</h1>
@@ -12,5 +12,5 @@ export default function Credit() {
 				<button>SIGN UP FOR FREE</button>
 			</section>
 		</>
-  );
+	);
 }

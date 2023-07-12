@@ -59,7 +59,8 @@ table {
                     .logo-container{ img{height: 2rem;}}
           }
           }
-          .sun{height:2em;}
+          .sun{height:2em; cursor: pointer;}
+          .sun:hover{transform: scale(1.3);}
 .search-container {
   position: relative;
 }

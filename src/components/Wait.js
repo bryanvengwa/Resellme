@@ -1,9 +1,14 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { themeContext } from '../Context/ThemeContext';
 
 export default function Wait() {
+	const {theme} = useContext(themeContext)
+	const themeStyles ={
+		backgroundColor: theme ? 'white' : 'black'
+	}
   return (
 		<>
-			<section className="wait">
+			<section style={themeStyles} className="wait">
 				<div className="container">
 					<div className="row">
 						<div className="col-md-12 col-lg-6">
